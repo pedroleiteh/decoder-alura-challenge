@@ -35,15 +35,14 @@ main {
   margin-left: 100px;
 }
 
-.box-input input {
+.box-input textarea {
   background: inherit;
   border: none;
-  padding: 24px;
   font-size: 24px;
   color: var(--Dark-blue-300);
 }
 
-.box-input input::placeholder {
+.box-input textarea::placeholder {
   color: var(--Dark-blue-300);
 }
 
@@ -71,10 +70,25 @@ main {
   border: none;
 }
 
+.encrypt:hover {
+  background: var(--gray-100);
+  color: var(--Dark-blue-300);
+  border: 1px solid var(--Dark-blue-300);
+  cursor: pointer;
+}
+
 .decrypt {
   background: var(--gray-100);
   color: var(--Dark-blue-300);
   border: 1px solid var(--Dark-blue-300);
+}
+
+.decrypt:hover {
+  background: var(--Dark-blue-300);
+  color: var(--gray-100);
+  margin-right: 8px;
+  border: none;
+  cursor: pointer;
 }
 
 /* aside */
