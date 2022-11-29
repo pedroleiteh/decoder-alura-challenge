@@ -16,19 +16,19 @@
 		</div>
 
 		<div class="box-input">
-			<textarea name="text" id="" cols="50" rows="10" placeholder="Digite seu texto aqui"></textarea>
+			<textarea name="text" id="" cols="50" rows="10" placeholder="Digite seu texto aqui">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</textarea>
 		</div>
 
 		<div class="buttons">
 			<p> <img src="./assets/images/exclamation.png" alt="exclamation"> Apenas letras minúsculas e sem acento.</p>
-			<button class="encrypt">Criptografar</button>
+			<button class="encrypt" onclick="changeAsideStyle()">Criptografar</button>
 			<button class="decrypt">Descriptografar</button>
 		</div>
 	</main>
-	<aside>
-		<img src="./assets/images/person.png" alt="a girl looking at a diamond" od>
-		<h2>Nenhuma Mensagem encontrada</h2>
-		<p>Digite um texto que você deseja criptografar ou descriptografar</p>
+	<aside id="aside">
+		<img src="./assets/images/person.png" alt="a girl looking at a diamond" id="girl-image">
+		<h2 id="aside-title">Nenhuma Mensagem encontrada</h2>
+		<p id="aside-paragraph">Digite um texto que você deseja criptografar ou descriptografar</p>
 	</aside>
 
 	<script src="./js/script.js"></script>
