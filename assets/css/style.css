@@ -6,7 +6,9 @@
   --light-blue-300: #E9ECF8;
 
   --gray-100: #CED4DA;
-  --grey-400: #495057;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+  --white: #fff;
 }
 
 * {
@@ -59,7 +61,7 @@ main {
 
 .buttons p {
   margin-bottom: 15px;
-  color: var(--grey-400);
+  color: var(--gray-400);
 }
 
 .encrypt {
@@ -73,4 +75,32 @@ main {
   background: var(--gray-100);
   color: var(--Dark-blue-300);
   border: 1px solid var(--Dark-blue-300);
+}
+
+/* aside */
+
+aside {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 40px;
+  border-radius: 32px;
+  width: 380px;
+  height: 600px;
+}
+
+aside h2 {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 24px;
+  color: var(--gray-500);
+}
+
+aside p {
+  font-size: 16px;
+  text-align: center;
+  color: var(--gray-400);
 }
