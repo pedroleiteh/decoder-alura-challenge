@@ -120,7 +120,6 @@ aside p {
 .encrypted-text {
   font-size: 20px;
   text-align: justify;
-  border: 1px solid red;
   word-break: break-all;
 }
 

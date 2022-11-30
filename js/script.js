@@ -13,6 +13,7 @@ function changeAsideStyle() {
   button.classList.add("copy-button")
   aside.appendChild(button)
   aside.classList.add("aside-flex")
+  
 }
 
 function encryptText(text) {
@@ -54,6 +55,7 @@ function encryptButton() {
   changeAsideStyle()
   let encryptedText = encryptText(text)
   asideParagraph.innerHTML = encryptedText
+  button.addEventListener('button', updateClipboard(encryptedText))
 }
 
 function decryptButton() {
@@ -61,4 +63,11 @@ function decryptButton() {
   changeAsideStyle()
   let decryptedText = decryptText(text)
   asideParagraph.innerHTML = decryptedText
+  button.addEventListener('button', updateClipboard(decryptedText))
 }
+
+/* copy button */
+function updateClipboard(newClip) {
+  navigator.clipboard.writeText(newClip)
+}
+
