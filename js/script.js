@@ -1,6 +1,7 @@
 let asideParagraph = document.getElementById("aside-paragraph")
 let button = document.createElement("button")
 let buttonString = document.createTextNode("Copiar")
+let aside = document.querySelector('aside')
 
 function changeAsideStyle() {
   document.getElementById("girl-image").style.display = "none"
@@ -11,6 +12,7 @@ function changeAsideStyle() {
   button.classList.add("decrypt")
   button.classList.add("copy-button")
   aside.appendChild(button)
+  aside.classList.add("aside-flex")
 }
 
 function encryptText(text) {
@@ -31,7 +33,20 @@ function encryptText(text) {
     }
   }
 
-  return encryptedText
+  return encryptedText;
+}
+
+function decryptText(text) {
+  
+  for(let i = 0; i < text.length; i++) {
+    text = text.replace("ai", "a")
+    text = text.replace("enter", "e")
+    text = text.replace("imes", "i")
+    text = text.replace("ober", "o")
+    text = text.replace("ufat", "u")
+  }
+
+  return text;
 }
 
 function encryptButton() {
@@ -39,4 +54,11 @@ function encryptButton() {
   changeAsideStyle()
   let encryptedText = encryptText(text)
   asideParagraph.innerHTML = encryptedText
+}
+
+function decryptButton() {
+  let text = document.querySelector("textarea").value
+  changeAsideStyle()
+  let decryptedText = decryptText(text)
+  asideParagraph.innerHTML = decryptedText
 }
